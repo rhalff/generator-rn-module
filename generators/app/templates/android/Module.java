@@ -1,4 +1,4 @@
-package com.gettipsi.boilerplate;
+package <%= packageName %>;
 
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -10,11 +10,11 @@ import com.facebook.react.bridge.WritableNativeArray;
 
 import java.util.Map;
 
-public class RNBoilerplateModule extends ReactContextBaseJavaModule {
+public class <%= moduleName %>Module extends ReactContextBaseJavaModule {
 
-  private static final String MODULE_NAME = "RNBoilerplateModule";
+  private static final String MODULE_NAME = "<%= moduleName %>Module";
 
-  public RNBoilerplateModule(ReactApplicationContext reactContext) {
+  public <%= moduleName %>Module(ReactApplicationContext reactContext) {
     super(reactContext);
   }
 

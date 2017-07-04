@@ -1,18 +1,18 @@
 {
-  "name": "generator-module-react-native",
+  "name": "generator-rn-module",
   "version": "1.0.0",
-  "description": "Generate react-native android module boilerplate",
+  "description": "Generate react-native module boilerplate",
   "files": [
-    "templates"
+    "generators/app"
   ],
   "dependencies": {
     "mkdirp": "^0.5.1",
-    "yeoman-generator": "^0.21.1"
+    "yeoman-generator": "^1.1.1"
   },
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rhalff/generator-module-react-native.git"
+    "url": "git+https://github.com/rhalff/generator-rn-module.git"
   },
   "keywords": [
     "yeoman-generator",
@@ -22,7 +22,7 @@
   "author": "Rob Halff <rob.halff@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rhalff/generator-module-react-native/issues"
+    "url": "https://github.com/rhalff/generator-rn-module/issues"
   },
-  "homepage": "https://github.com/rhalff/generator-module-react-native#readme"
+  "homepage": "https://github.com/rhalff/generator-rn-module#readme"
 }

@@ -15,8 +15,8 @@
 3. Android part
 
    1. `android/src/main/java/com/gettipsi/boilerplate` => `android/src/main/java/com/%YOUR_COMPANY%/%YOUR_MODULE_NAME%`
-   2. `android/src/main/java/com/gettipsi/boilerplate/RNBoilerplateModule.java`
-   3. `android/src/main/java/com/gettipsi/boilerplate/RNBoilerplateReactPackage.java`
+   2. `android/src/main/java/com/gettipsi/boilerplate/<%= moduleName %>Module.java`
+   3. `android/src/main/java/com/gettipsi/boilerplate/<%= moduleName %>ReactPackage.java`
    4. `android/src/main/AndroidManifest.xml`
 
 4. `src` folder

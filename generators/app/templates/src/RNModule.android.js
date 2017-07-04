@@ -5,15 +5,15 @@ import {
   NativeModules,
 } from 'react-native'
 
-const { RNBoilerplateModule } = NativeModules
+const { <%= moduleName %>Module } = NativeModules
 
-export default class RNBoilerplateModuleComponent extends Component {
+export default class <%= moduleName %>ModuleComponent extends Component {
   render() {
     return (
       <View>
         <Button
           title="To get started, edit RNModule.android.js"
-          onPress={() => RNBoilerplateModule.findCars()}
+          onPress={() => <%= moduleName %>Module.findCars()}
         />
       </View>
     )
