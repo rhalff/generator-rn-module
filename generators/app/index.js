@@ -75,6 +75,18 @@ class RNModuleGenerator extends Base {
     const packageFolder = this._setupAndroidPackageFolders(vars.packageName)
 
     this.fs.copyTpl(
+      this.templatePath('android/AndroidManifest.xml'),
+      this.destinationPath('android/src/main/AndroidManifest.xml'),
+      vars
+    )
+
+    this.fs.copyTpl(
+      this.templatePath('android/build.gradle'),
+      this.destinationPath('android/build.gradle'),
+      vars
+    )
+
+    this.fs.copyTpl(
       this.templatePath('android/Module.java'),
       packageFolder + vars.moduleName + 'Module.java',
       vars
@@ -136,7 +148,8 @@ class RNModuleGenerator extends Base {
   }
 
   _copyExampleFiles(vars) {
-    const copyOnlyExtensions = 'jar';
+    const copyOnlyExtensions = 'jar|png';
+    const extensionLess = 'BUCK|gradlew|Podfile';
 
     this.fs.copyTpl(
       this.templatePath(`example/**/*.!(${copyOnlyExtensions})`),
@@ -144,7 +157,11 @@ class RNModuleGenerator extends Base {
       vars
     )
     this.fs.copy(
-      this.templatePath(`example/**/*.${copyOnlyExtensions}`),
+      this.templatePath(`example/**/*.+(${copyOnlyExtensions})`),
+      this.destinationPath('example/')
+    )
+    this.fs.copy(
+      this.templatePath(`example/**/*(${extensionLess})`),
       this.destinationPath('example/')
     )
   }
