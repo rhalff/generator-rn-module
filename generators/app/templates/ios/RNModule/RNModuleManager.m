@@ -32,7 +32,7 @@
 
 RCT_EXPORT_MODULE();
 
-RCT_REMAP_METHOD(findCars,
+RCT_REMAP_METHOD(<%= reactMethodName %>,
                  resolver:(RCTPromiseResolveBlock)resolve
                  rejecter:(RCTPromiseRejectBlock)reject)
 {

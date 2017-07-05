@@ -24,7 +24,7 @@ public class <%= moduleName %>Module extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void findCars(Promise promise) {
+  public void <%= reactMethodName %>(Promise promise) {
     WritableNativeArray cars = new WritableNativeArray();
     cars.pushString("Mercedes-Benz");
     cars.pushString("BMW");

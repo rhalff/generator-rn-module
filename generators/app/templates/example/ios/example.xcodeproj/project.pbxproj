@@ -455,7 +455,7 @@
 			dependencies = (
 			);
 			name = example;
-			productName = "Hello World";
+			productName = "<%= appName %>";
 			productReference = 13B07F961A680F5B00A75B9A /* example.app */;
 			productType = "com.apple.product-type.application";
 		};

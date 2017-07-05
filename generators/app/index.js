@@ -1,12 +1,34 @@
 const Base = require('yeoman-generator')
 const stringUtils = require('./string-utils')
 const mkdirp = require('mkdirp')
+const gitUser = require('./git-user')
+const os = require('os')
 
 class RNModuleGenerator extends Base {
   prompting() {
     const appName = stringUtils.camelize(this.appname)
+    const user = gitUser()
+    const username = os.userInfo().username
 
     return this.prompt([
+      {
+        type    : 'input',
+        name    : 'username',
+        message : 'Username',
+        default : username
+      },
+      {
+        type    : 'input',
+        name    : 'author',
+        message : 'Author',
+        default : user ? user.name : 'John Doe'
+      },
+      {
+        type    : 'input',
+        name    : 'appName',
+        message : 'NPM Package Name (dashed)',
+        default : appName
+      },
       {
         type    : 'input',
         name    : 'moduleName',

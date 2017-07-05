@@ -13,7 +13,7 @@ export default class RNModuleManagerComponent extends Component {
       <View>
         <Button
           title="To get started, edit RNModule.android.js"
-          onPress={() => RNModuleManager.findCars()}
+          onPress={() => RNModuleManager.<%= reactMethodName %>()}
         />
       </View>
     )

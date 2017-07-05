@@ -13,7 +13,7 @@ export default class <%= moduleName %>ModuleComponent extends Component {
       <View>
         <Button
           title="To get started, edit RNModule.android.js"
-          onPress={() => <%= moduleName %>Module.findCars()}
+          onPress={() => <%= moduleName %>Module.<%= reactMethodName %>()}
         />
       </View>
     )
