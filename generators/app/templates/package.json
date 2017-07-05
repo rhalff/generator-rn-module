@@ -22,12 +22,6 @@
     "url": "https://github.com/isnifer/react-native-module-boilerplate/issues"
   },
   "homepage": "https://github.com/isnifer/react-native-module-boilerplate#readme",
-  "rnpm": {
-    "commands": {
-      "prelink": "node_modules/react-native-module-boilerplate/scripts/pre-link.sh",
-      "postlink": "node_modules/react-native-module-boilerplate/scripts/post-link.sh"
-    }
-  },
   "peerDependencies": {
     "react-native": "*"
   },
